@@ -3,6 +3,47 @@
 <head>
     <title>About</title>
     <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
+    <style>
+      body {
+          font-family: 'DM Serif Text', serif;
+          font-size: 20px;
+      }
+      .about-container {
+          max-width: 900px;
+          margin: 0 auto;
+          padding: 20px;
+          line-height: 2;
+      }
+      .about-img {
+          width: 100%;
+          max-width: 350px;
+          height: auto;
+          border-radius: 8px;
+      }
+      .about-img.left {
+          float: left;
+          margin-right: 30px;
+          margin-bottom: 20px;
+      }
+      .about-img.right {
+          float: right;
+          margin-left: 30px;
+          margin-bottom: 20px;
+      }
+      .about-img.small {
+          max-width: 250px;
+      }
+      .about-section {
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          gap: 20px;
+      }
+      .about-section p strong {
+        font-size: 24px;
+      }
+  </style>
 </head>
 <body>
     <div class="navbar">
@@ -19,6 +60,36 @@
         <a href="exhibitions.html">Exhibitions</a>
         <a id="donate" href="donate.html">Donate</a>
     </div>
+
+    <div class="about-container">
+      <h1>About Newman's Studio</h1>
+
+      <div class="about-section">
+          <img src="1.jpg" alt="Art studio space" class="about-img left">
+          <p><strong>Who We Are</strong><br>Newman's Studio is a creative hub for artists of all levels, offering an inspiring space to explore and refine their artistic skills. Our goal is to foster a community where imagination thrives and self-expression is celebrated.</p>
+      </div>
+
+      <div class="about-section">
+          <p><strong>Our Mission</strong><br>We are committed to providing a welcoming environment where students can learn, experiment, and grow artistically. Our classes, workshops, and exhibitions are designed to bring creativity to life.</p>
+      </div>
+
+      <div class="about-section">
+          <p><strong>Our Story</strong><br>Founded with a vision to create a space where art thrives, Newman’s Studio started as a small workshop and grew into a full-fledged creative community. Our journey has been shaped by passionate artists, educators, and students who believe in the transformative power of art.</p>
+          <img src="2.jpg" alt="Art exhibition in studio" class="about-img right">
+      </div>
+
+      <div class="about-section">
+          <img src="3.jpg" alt="Students working on art projects" class="about-img left small">
+          <div>
+              <p><strong>What We Offer</strong></p>
+              <ul>
+                  <li>• <strong>Art Classes & Workshops</strong> - We offer a variety of classes, from drawing and painting to sculpture and digital art, tailored to different age groups and skill levels.</li>
+                  <li>• <strong>Experienced Instructors</strong> - Our professional artists and educators bring a wealth of knowledge, passion, and mentorship to every class.</li>
+                  <li>• <strong>Creative Community</strong> - Connect with like-minded artists, participate in exhibitions, and collaborate on exciting projects.</li>
+                  <li>• <strong>Studio Space & Resources</strong> - Our well-equipped studio provides the perfect setting for creative expression, with high-quality materials and tools available for students.</li>
+              </ul>
+          </div>
+      </div>
 
     <div class="footer">
       <h3 id="footer-title">Newman's Studio</h3>
