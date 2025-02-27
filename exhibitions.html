@@ -44,10 +44,10 @@
     </div>
 
     <div class="popup" id="popup">
+      <button id="close-btn">x</button>
       <h3 id="popupTitle"></h3>
       <p id="details"></p>
       <div id="popupImages"></div>
-      <button id="close-btn">x</button>
     </div>
 
     <div class="overlay" id="overlay"></div>
@@ -115,6 +115,9 @@
 
                 popup.style.display = "block";
                 overlay.style.display = "block";
+                // body.style. //make it unable to scroll on grid page
+                // //add margin
+
             });
         });
 
