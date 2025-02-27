@@ -124,3 +124,11 @@ ul > li > a:hover {
 	margin-top: auto;
 	display: block;
 }
+
+.form-container {
+    margin: 20px;
+}
+
+.hidden {
+    display: none;
+}

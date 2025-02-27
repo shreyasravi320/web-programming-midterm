@@ -20,6 +20,37 @@
         <a id="donate" href="donate.html">Donate</a>
     </div>
 
+    <div class="form-container">
+        <form id="admissions-form">
+            <label for="first-name">First Name:</label><br>
+            <input type="text" id="first-name" name="first-name" required><br><br>
+
+            <label for="last-name">Last Name:</label><br>
+            <input type="text" id="last-name" name="last-name" required><br><br>
+
+            <label for="dob">Date of Birth:</label><br>
+            <input type="date" id="dob" name="dob" required><br><br>
+
+            <label for="field-of-study">Field of Study:</label><br>
+            <select id="field-of-study" name="field-of-study" required>
+                <option value="">Select a field of study</option>
+                <option value="Fine Arts">Fine Arts</option>
+                <option value="Graphic Design">Graphic Design</option>
+                <option value="Photography">Photography</option>
+                <option value="Ceramics">Ceramics</option>
+                <option value="Sculpture">Sculpture</option>
+                <option value="Art History">Art History</option>
+            </select><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <div id="success-container" class="hidden">
+            <p id="success-message">Successfully submitted your application!</p>
+            <button id="back-button">Back to Admissions Page</button>
+        </div>
+    </div>
+
     <div class="footer">
       <h3 id="footer-title">Newman's Studio</h3>
       <ul>
@@ -32,5 +63,23 @@
         <li><a href="donate.html">Donate</a></li>
       </ul>
     </div>
+
+    <script>
+        const form = document.getElementById('admissions-form');
+        const successContainer = document.getElementById('success-container');
+        form.addEventListener('submit', function(event) {
+            event.preventDefault();
+            form.classList.add('hidden');
+            successContainer.classList.remove('hidden');
+        });
+
+        const backButton = document.getElementById('back-button');
+        backButton.addEventListener('click', function() {
+            form.reset();
+            form.classList.remove('hidden');
+            successContainer.classList.add('hidden');
+        });
+    </script>
+
 </body>
 </html>
