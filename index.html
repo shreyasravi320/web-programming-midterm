@@ -3,6 +3,33 @@
 <head>
     <title>Home Page</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+      .banner {
+        width: 100%;
+        height: 50vh;
+        display: flex;
+        background-image: url("images/banner.jpg");
+        margin: 10px 0;
+        background-size: cover;
+      }
+      .header {
+        text-align: center;
+      }
+      h3 a {
+        text-align: center;
+        font-size: x-large;
+        text-decoration: none;
+        align-self: center;
+        display:inline;
+        background-color: cornflowerblue;
+        border-radius: 40px;
+        padding: 20px;
+      }
+
+      h3 a:hover {
+        background-color: rgb(100, 100, 233);
+      }
+    </style>
 </head>
 <body>
     <div class="navbar">
@@ -19,6 +46,17 @@
         <a href="exhibitions.html">Exhibitions</a>
         <a id="donate" href="donate.html">Donate</a>
     </div>
+
+    <h1 class="header">Newman's Studio</h1>
+
+    <div class="banner"></div>
+
+    <h2 class="header">A versatile selection of courses</h2>
+
+    <h2 class="header">Want to Further Your Art Journey?</h2>
+    <h3> <a href="admissions.html">Click here to fill out our admissions form!</a></h3>
+
+    <h3> <a href="donate.html">Donate!</a></h3>
 
     <div class="footer">
       <h3 id="footer-title">Newman's Studio</h3>
