@@ -3,6 +3,7 @@
 <head>
   <title>Exhibitions</title>
   <link rel="stylesheet" href="exhibitionss.css">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
     <div class="navbar">
@@ -98,9 +99,11 @@
                   details.textContent = content.body;
                   popupImages.innerHTML = content.images.map(img => `<img src="${img}" alt="image">`).join("");
   
-                  popup.style.display = "block";
-                  overlay.style.display = "block";
+                  // popup.style.display = "block";
+                  // overlay.style.display = "block";
+                  $("#popup, #overlay").fadeIn(400);
                   document.body.classList.add("no-scroll");
+                  // document.body.classList.add("no-scroll");
               });
           });
       }

@@ -43,9 +43,9 @@ img {
     color: white;
     border: none;
     padding: 5px 10px;
-	position: fixed;
-	right: 7%;
-	top: 2%;
+	position: absolute;
+	right: 10px;
+	top: 10px;
 	font-size: 1em;
 	z-index: 1000;
 }
