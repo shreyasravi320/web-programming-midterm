@@ -20,28 +20,28 @@
         <a id="donate" href="donate.html">Donate</a>
     </div>
 
-    <h2>Exhibititions Currently Showing</h2>
+    <h1>Exhibititions</h1>
 
     <div class="exhibitsGrid" id="exhGrid">
         <div class="exhibit" data-item="1">
           <div class="exhibitCovers Lola"></div>
-          <h3 class="exhibitTitle">Lola Butan</h3>
+          <h3 class="exhibitTitle">Architectural Endeavor: Lola Butan</h3>
         </div>
       <div class="exhibit" data-item="2">
         <div class="exhibitCovers Moli"></div>
-        <h3 class="exhibitTitle">Moli Ma</h3>
+        <h3 class="exhibitTitle">Moli Ma Solo Show</h3>
       </div>
       <div class="exhibit" data-item="3">
         <div class="exhibitCovers Kaelen"></div>
-        <h3 class="exhibitTitle">Kaelen Song</h3>
+        <h3 class="exhibitTitle">Exploration of the body: Kaelen Song</h3>
       </div>
       <div class="exhibit" data-item="4">
         <div class="exhibitCovers Zoe"></div>
-        <h3 class="exhibitTitle">Zoe Wang</h3>
+        <h3 class="exhibitTitle">Zoe Wang Artist Residency</h3>
       </div>
       <div class="exhibit" data-item="5">
         <div class="exhibitCovers Anne"></div>
-        <h3 class="exhibitTitle">Anne Wu</h3>
+        <h3 class="exhibitTitle">Anne Wu Retrospective</h3>
       </div>
     </div>
 
@@ -67,68 +67,52 @@
       </ul>
     </div>
     <script>
-        const exhibits = document.querySelectorAll('.exhibit');
-        const popup = document.getElementById('popup');
-        const overlay = document.getElementById('overlay');
-        const closeButton = document.getElementById('close-btn');
-        const popupTitle = document.getElementById("popupTitle");
-        const details = document.getElementById("details");
-        const popupImages = document.getElementById("popupImages");
-        const exhGrid = document.getElementById("exhibitsGrid");
-
-        const data = {
-            1: {
-                header: "Lola Butan Solo Show",
-                body: "Candor Gallery, Feb 12-31st",
-                images: ["images/LolaB/lola1.jpg", "images/LolaB/lola2.jpg", "images/LolaB/lola3.jpg","images/LolaB/lola5.jpg"]
-            },
-            2: {
-                header: "Moli Ma Solo Show",
-                body: "Candor Gallery, April 1-21st",
-                images: ["images/MoliMa/moli1.png", "images/MoliMa/moli2.jpeg", "images/MoliMa/moli3.PNG", "images/MoliMa/moli4.jpeg"]
-            },
-            3: {
-                header: "Kaelen Song Exhibit",
-                body: "Whittaker Gallery, March 3-15th",
-                images: ["images/KaelenS/kaelen1.jpeg", "images/KaelenS/kaelen2.jpeg"]
-            },
-            4: {
-                header: "Zoe Wang Artist Residency",
-                body: "Modern Art Museum, May 5-20th",
-                images: ["images/Zoe1/zoe1.JPG", "images/Zoe1/zoe2.JPG", "images/Zoe1/zoe3.JPG"]
-            },
-            5: {
-                header: "Anne Wu Retrospective",
-                body: "City Art Space, June 10-30th",
-                images: ["images/AnneW/anne1.jpg", "images/AnneW/anne2.png"]
-            }
-        };
-
-        exhibits.forEach(exhibit => {
-            exhibit.addEventListener("click", function () {
-                const itemId = this.getAttribute("data-item");
-                const content = data[itemId];
-
-                console.log("this is the data id:", content);
-
-                popupTitle.textContent = content.header;
-                details.textContent = content.body;
-                popupImages.innerHTML = content.images.map(img => `<img src="${img}" alt="image">`).join("");
-
-                popup.style.display = "block";
-                overlay.style.display = "block";
-                document.body.classList.add("no-scroll");
-            });
-        });
-
-        closeButton.addEventListener('click', closePopup);
-        overlay.addEventListener('click', closePopup);
-
-        function closePopup() {
-            popup.style.display = 'none';
-            overlay.style.display = 'none';
-            document.body.classList.remove("no-scroll");
-        }
-    </script>
+      const exhibits = document.querySelectorAll('.exhibit');
+      const popup = document.getElementById('popup');
+      const overlay = document.getElementById('overlay');
+      const closeButton = document.getElementById('close-btn');
+      const popupTitle = document.getElementById("popupTitle");
+      const details = document.getElementById("details");
+      const popupImages = document.getElementById("popupImages");
+  
+      let exhibitionData = {};
+  
+      // Read from external JSON file
+      fetch('exhibitions.json')
+          .then(response => response.json())
+          .then(data => {
+              exhibitionData = data;
+              attachEventListeners();
+          })
+          .catch(error => console.error("Error loading exhibition data:", error));
+  
+      function attachEventListeners() {
+          exhibits.forEach(exhibit => {
+              exhibit.addEventListener("click", function () {
+                  const itemId = this.getAttribute("data-item");
+                  const content = exhibitionData[itemId];
+  
+                  if (!content) return;
+  
+                  popupTitle.textContent = content.header;
+                  details.textContent = content.body;
+                  popupImages.innerHTML = content.images.map(img => `<img src="${img}" alt="image">`).join("");
+  
+                  popup.style.display = "block";
+                  overlay.style.display = "block";
+                  document.body.classList.add("no-scroll");
+              });
+          });
+      }
+  
+      closeButton.addEventListener('click', closePopup);
+      overlay.addEventListener('click', closePopup);
+  
+      function closePopup() {
+          popup.style.display = 'none';
+          overlay.style.display = 'none';
+          document.body.classList.remove("no-scroll");
+      }
+  </script>
 </body>
 </html>

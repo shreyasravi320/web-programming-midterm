@@ -1,0 +1,27 @@
+{
+    "1": {
+        "header": "Architectural Endeavor: Lola Butan, Picola Gallery, Feb 12-31st",
+        "body": "The poetics of space are on full display in Butan's exploration of imagined spaces.",
+        "images": ["images/LolaB/lola1.jpg", "images/LolaB/lola2.jpg", "images/LolaB/lola3.jpg","images/LolaB/lola5.jpg"]
+    },
+    "2": {
+        "header": "Moli Ma Solo Show, Mooky Gallery, April 1-21st",
+        "body": "Ma's first solo show takes inspiration from the world around her, noticing stories as they unfold within and around the objects around her.",
+        "images": ["images/MoliMa/moli1.png", "images/MoliMa/moli2.jpeg", "images/MoliMa/moli3.PNG", "images/MoliMa/moli4.jpeg"]
+    },
+    "3": {
+        "header": "Exploration of the body: Kaelen Song, Whittaker Gallery, March 3-15th",
+        "body": "Song's studies of the human body take into account more than just the physical in this student show.",
+        "images": ["images/KaelenS/kaelen1.jpeg", "images/KaelenS/kaelen2.jpeg"]
+    },
+    "4": {
+        "header": "Zoe Wang Artist Residency, Swan Room, May 5-20th",
+        "body": "What is photo? How does flora and fauna contribute or not contribute to aspects of feminity? These are questions Wang attempts to answer in her residency at the Newman school of art. ",
+        "images": ["images/Zoe1/zoe1.JPG", "images/Zoe1/zoe2.JPG", "images/Zoe1/zoe3.JPG"]
+    },
+    "5": {
+        "header": "Anne Wu Retrospective, City Art Space, June 10-30th",
+        "body": "We must envision a world with infinite life and celestial visions. Anne Wu does just that in her show.",
+        "images": ["images/AnneW/anne1.jpg", "images/AnneW/anne2.png"]
+    }
+}
