@@ -43,8 +43,6 @@ ul > li > a:hover {
 }
 
 .navbar {
-	margin-left: 10px;
-	margin-right: 10px;
 	overflow: hidden;
 	background-color: #897ee9;
 	font-family: "Tahoma";
@@ -131,4 +129,17 @@ ul > li > a:hover {
 
 .hidden {
     display: none;
+}
+
+.class-pictures {
+    object-fit: cover;
+    object-position: top;
+    width: 30vw;
+    height: 20vw;
+}
+
+td {
+    font-family: Arial, Helvetica, sans-serif; 
+    font-weight: lighter;
+    text-align: center;
 }
