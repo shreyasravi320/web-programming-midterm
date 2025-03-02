@@ -115,6 +115,9 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	font-family: "DM Serif Text", serif;
+	font-style: normal;
+	color: #5782BB;
 }
 
 ul {
