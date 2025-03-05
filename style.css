@@ -84,7 +84,6 @@ ul > li > a:hover {
 .navbar a:hover,
 .dropdown:hover .dropbtn {
 	background-color: #8558e9;
-	;
 }
 
 /* Dropdown content (hidden by default) */
@@ -118,7 +117,7 @@ ul > li > a:hover {
 }
 
 .footer {
-	background-color: aquamarine;
+	background-color: darkseagreen;
 	margin-top: auto;
 	display: block;
 }
@@ -142,4 +141,29 @@ td {
     font-family: Arial, Helvetica, sans-serif; 
     font-weight: lighter;
     text-align: center;
+}
+
+@media (max-width: 700px) {
+	.navbar a {
+		width: 100%;
+		border-bottom: thin solid #473b63;
+		border-right: none;
+		display: block;
+	}
+
+	.dropdown {
+		display:block;
+		width: 100%;
+		text-align: center;
+		border-bottom: thin solid #473b63;
+	}
+
+	.dropdown-content {
+		position: relative;
+	}
+
+	.dropdown-content a {
+		text-align: center;
+		font-size: 18px;
+	}
 }
