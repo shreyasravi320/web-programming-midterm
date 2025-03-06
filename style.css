@@ -33,6 +33,7 @@ ul > li > a:hover {
 	float: right;
 	background-color: darkkhaki;
 }
+
 #donate:hover {
 	background-color: rgb(128, 121, 20);
 }
@@ -180,5 +181,9 @@ td {
 
 	#logo {
 		width: 40%;
+	}
+
+	.class-pictures {
+		height: 30vw;
 	}
 }
