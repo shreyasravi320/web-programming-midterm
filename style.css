@@ -9,18 +9,18 @@ body {
 	flex-direction: column;
 }
 
-ul {
+#footer-list  {
 	float: right;
 	list-style: none;
 	margin-right: 20px;
 }
 
-ul > li > a {
+#footer-list > li > a {
 	text-decoration: none;
 	font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-ul > li > a:hover {
+#footer-list > li > a:hover {
 	text-decoration: underline;
 }
 
@@ -177,6 +177,7 @@ td {
 
 	.dropdown .dropbtn {
 		border-right: none;
+		width: 100%;
 	}
 
 	#logo {
