@@ -75,9 +75,7 @@ ul > li > a:hover {
 	background-color: inherit;
 	border-right: thin solid #473b63;
 	font-family: inherit;
-	/* Important for vertical align on mobile phones */
 	margin: 0;
-	/* Important for vertical align on mobile phones */
 }
 
 /* Add a purple background color to navbar links on hover */
@@ -100,7 +98,7 @@ ul > li > a:hover {
 .dropdown-content a {
 	float: none;
 	color: black;
-	padding: 12px 16px;
+	padding: 12px 0;
 	text-decoration: none;
 	display: block;
 	text-align: left;
@@ -158,6 +156,7 @@ td {
 @media (max-width: 700px) {
 	.navbar a {
 		width: 100%;
+		padding: 10px 0;
 		border-bottom: thin solid #473b63;
 		border-right: none;
 		display: block;
@@ -178,6 +177,10 @@ td {
 	.dropdown-content a {
 		text-align: center;
 		font-size: 18px;
+	}
+
+	.dropdown .dropbtn {
+		border-right: none;
 	}
 
 	#logo {
