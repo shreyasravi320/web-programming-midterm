@@ -102,6 +102,11 @@
             const message = document.getElementById('message').value;
             const amount = document.getElementById('amount').value;
 
+            if (amount <= 0) {
+                alert('Please enter a donation value greater than 0');
+                return;
+            }
+
             let donorName = name;
             if (anonymous || !name) {
                 donorName = 'Anonymous';

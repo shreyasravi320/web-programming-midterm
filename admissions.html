@@ -1,9 +1,180 @@
+<!--<!DOCTYPE html>-->
+<!--<html>-->
+<!--<head>-->
+<!--    <title>Admissions</title>-->
+<!--    <meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+<!--    <link rel="stylesheet" href="style.css">-->
+<!--    <style>-->
+<!--        .form-and-details-container {-->
+<!--            display: flex;-->
+<!--            justify-content: space-between;-->
+<!--            align-items: flex-start;-->
+<!--            flex-grow: 1;-->
+<!--        }-->
+<!--        .details-container {-->
+<!--            margin-left: 20px;-->
+<!--            max-width: 300px;-->
+<!--        }-->
+<!--        .details-container li {-->
+<!--            margin-bottom: 15px;-->
+<!--            list-style-type: none;-->
+<!--        }-->
+<!--        .details-container li strong {-->
+<!--            display: block;-->
+<!--            margin-bottom: 5px;-->
+<!--        }-->
+<!--    </style>-->
+<!--</head>-->
+<!--<body>-->
+<!--    <a href="index.html" id="logo"><img src="images/logo.png"></a>-->
+<!--    <div class="navbar">-->
+<!--        <a href="index.html">Home</a>-->
+<!--        <div class="dropdown">-->
+<!--            <button class="dropbtn">About</button>-->
+<!--            <div class="dropdown-content">-->
+<!--              <a href="about.html">About Us</a>-->
+<!--              <a href="staff.html">Staff & Faculty</a>-->
+<!--              <a href="testimonials.html">Testimonials</a>-->
+<!--            </div>-->
+<!--        </div>-->
+<!--        <a href="admissions.html">Admissions</a>-->
+<!--        <a href="exhibitions.html">Exhibitions</a>-->
+<!--        <a id="donate" href="donate.html">Donate</a>-->
+<!--    </div>-->
+<!---->
+<!--    <div class="form-and-details-container">-->
+<!--        <div class="form-container">-->
+<!--            <form id="admissions-form">-->
+<!--                <label for="first-name">First Name:</label><br>-->
+<!--                <input type="text" id="first-name" name="first-name" required><br><br>-->
+<!---->
+<!--                <label for="last-name">Last Name:</label><br>-->
+<!--                <input type="text" id="last-name" name="last-name" required><br><br>-->
+<!---->
+<!--                <label for="dob">Date of Birth:</label><br>-->
+<!--                <input type="date" id="dob" name="dob" required><br><br>-->
+<!---->
+<!--                <label for="field-of-study">Field of Study:</label><br>-->
+<!--                <select id="field-of-study" name="field-of-study" required>-->
+<!--                    <option value="">Select a field of study</option>-->
+<!--                    <option value="Fine Arts">Fine Arts</option>-->
+<!--                    <option value="Graphic Design">Graphic Design</option>-->
+<!--                    <option value="Photography">Photography</option>-->
+<!--                    <option value="Ceramics">Ceramics</option>-->
+<!--                    <option value="Sculpture">Sculpture</option>-->
+<!--                    <option value="Art History">Art History</option>-->
+<!--                </select><br><br>-->
+<!---->
+<!--                <button type="submit">Submit</button>-->
+<!--            </form>-->
+<!---->
+<!--            <div class="details-container">-->
+<!--                <h4>Fields of Study</h4>-->
+<!--                <ul>-->
+<!--                    <li id="FineArts"><strong>Fine Arts</strong>-->
+<!--                        <p>Explore traditional and contemporary art forms, including painting, drawing, and mixed media.</p>-->
+<!--                    </li>-->
+<!--                    <li id="GraphicDesign"><strong>Graphic Design</strong>-->
+<!--                        <p>Study visual communication and design principles using modern tools and technologies.</p>-->
+<!--                    </li>-->
+<!--                    <li id="Photography"><strong>Photography</strong>-->
+<!--                        <p>Learn about photographic techniques, from composition to digital editing and darkroom processes.</p>-->
+<!--                    </li>-->
+<!--                    <li id="Ceramics"><strong>Ceramics</strong>-->
+<!--                        <p>Focus on clay modeling, sculptural practices, and glazes to create ceramic art pieces.</p>-->
+<!--                    </li>-->
+<!--                    <li id="Sculpture"><strong>Sculpture</strong>-->
+<!--                        <p>Study three-dimensional art forms, using materials such as clay, metal, and wood.</p>-->
+<!--                    </li>-->
+<!--                    <li id="ArtHistory"><strong>Art History</strong>-->
+<!--                        <p>Understand art evolution through history, exploring different movements and their cultural impacts.</p>-->
+<!--                    </li>-->
+<!--                </ul>-->
+<!--            </div>-->
+<!--        </div>-->
+<!---->
+<!--        <div id="success-container" class="hidden">-->
+<!--            <p id="success-message">Successfully submitted your application!</p>-->
+<!--            <button id="back-button">Back to Admissions Page</button>-->
+<!--        </div>-->
+<!--    </div>-->
+<!---->
+<!---->
+<!--    <div class="footer">-->
+<!--      <h3 id="footer-title">Newman's Studio</h3>-->
+<!--      <ul id="footer-list">-->
+<!--        <li><a href="index.html">Home</a></li>-->
+<!--        <li><a href="about.html">About Us</a></li>-->
+<!--        <li><a href="staff.html">Staff & Faculty</a></li>-->
+<!--        <li><a href="testimonials.html">Testimonials</a></li>-->
+<!--        <li><a href="admissions.html">Admissions</a></li>-->
+<!--        <li><a href="exhibitions.html">Exhibitions</a></li>-->
+<!--        <li><a href="donate.html">Donate</a></li>-->
+<!--      </ul>-->
+<!--    </div>-->
+<!---->
+<!--    <script>-->
+<!--        const form = document.getElementById('admissions-form');-->
+<!--        const successContainer = document.getElementById('success-container');-->
+<!--        form.addEventListener('submit', function(event) {-->
+<!--            event.preventDefault();-->
+<!--            form.classList.add('hidden');-->
+<!--            successContainer.classList.remove('hidden');-->
+<!--        });-->
+<!---->
+<!--        const backButton = document.getElementById('back-button');-->
+<!--        backButton.addEventListener('click', function() {-->
+<!--            form.reset();-->
+<!--            form.classList.remove('hidden');-->
+<!--            successContainer.classList.add('hidden');-->
+<!--        });-->
+<!--    </script>-->
+<!---->
+<!--</body>-->
+<!--</html>-->
+
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Admissions</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css">
+    <style>
+        .form-and-details-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-start;
+            max-width: 100rem;
+            margin: 20px auto;
+        }
+
+        .form-container {
+            max-width: 50rem;
+            flex-grow: 1;
+        }
+
+        .details-container {
+            max-width: 50rem;
+            margin-left: 20px;
+            flex-shrink: 0;
+        }
+
+        .details-container ul {
+            margin: 0;
+            padding: 0;
+            list-style-type: none;
+        }
+
+        .details-container li {
+            margin-bottom: 15px;
+        }
+
+        .details-container li strong {
+            display: block;
+            margin-bottom: 5px;
+        }
+    </style>
 </head>
 <body>
     <a href="index.html" id="logo"><img src="images/logo.png"></a>
@@ -22,34 +193,60 @@
         <a id="donate" href="donate.html">Donate</a>
     </div>
 
-    <div class="form-container">
-        <form id="admissions-form">
-            <label for="first-name">First Name:</label><br>
-            <input type="text" id="first-name" name="first-name" required><br><br>
+    <div class="form-and-details-container">
+        <div class="form-container">
+            <form id="admissions-form">
+                <label for="first-name">First Name:</label><br>
+                <input type="text" id="first-name" name="first-name" required><br><br>
 
-            <label for="last-name">Last Name:</label><br>
-            <input type="text" id="last-name" name="last-name" required><br><br>
+                <label for="last-name">Last Name:</label><br>
+                <input type="text" id="last-name" name="last-name" required><br><br>
 
-            <label for="dob">Date of Birth:</label><br>
-            <input type="date" id="dob" name="dob" required><br><br>
+                <label for="dob">Date of Birth:</label><br>
+                <input type="date" id="dob" name="dob" required><br><br>
 
-            <label for="field-of-study">Field of Study:</label><br>
-            <select id="field-of-study" name="field-of-study" required>
-                <option value="">Select a field of study</option>
-                <option value="Fine Arts">Fine Arts</option>
-                <option value="Graphic Design">Graphic Design</option>
-                <option value="Photography">Photography</option>
-                <option value="Ceramics">Ceramics</option>
-                <option value="Sculpture">Sculpture</option>
-                <option value="Art History">Art History</option>
-            </select><br><br>
+                <label for="field-of-study">Field of Study:</label><br>
+                <select id="field-of-study" name="field-of-study" required>
+                    <option value="">Select a field of study</option>
+                    <option value="Fine Arts">Fine Arts</option>
+                    <option value="Graphic Design">Graphic Design</option>
+                    <option value="Photography">Photography</option>
+                    <option value="Ceramics">Ceramics</option>
+                    <option value="Sculpture">Sculpture</option>
+                    <option value="Art History">Art History</option>
+                </select><br><br>
 
-            <button type="submit">Submit</button>
-        </form>
+                <button type="submit">Submit</button>
+            </form>
 
-        <div id="success-container" class="hidden">
-            <p id="success-message">Successfully submitted your application!</p>
-            <button id="back-button">Back to Admissions Page</button>
+            <div id="success-container" class="hidden">
+                <p id="success-message">Successfully submitted your application!</p>
+                <button id="back-button">Back to Admissions Page</button>
+            </div>
+        </div>
+
+        <div class="details-container">
+            <h4>Fields of Study</h4>
+            <ul>
+                <li><strong>Fine Arts</strong>
+                    <p>Explore traditional and contemporary art forms, including painting, drawing, and mixed media.</p>
+                </li>
+                <li><strong>Graphic Design</strong>
+                    <p>Study visual communication and design principles using modern tools and technologies.</p>
+                </li>
+                <li><strong>Photography</strong>
+                    <p>Learn about photographic techniques, from composition to digital editing and darkroom processes.</p>
+                </li>
+                <li><strong>Ceramics</strong>
+                    <p>Focus on clay modeling, sculptural practices, and glazes to create ceramic art pieces.</p>
+                </li>
+                <li><strong>Sculpture</strong>
+                    <p>Study three-dimensional art forms, using materials such as clay, metal, and wood.</p>
+                </li>
+                <li><strong>Art History</strong>
+                    <p>Understand art evolution through history, exploring different movements and their cultural impacts.</p>
+                </li>
+            </ul>
         </div>
     </div>
 
