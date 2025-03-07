@@ -9,7 +9,6 @@ h1 {
     position: fixed;
     top: 3%;
     left: 4%;
-    /* transform: translate(-50%, -50%); */
     padding: 20px;
     background-color: #f8e9d3;
     z-index: 20;
@@ -33,8 +32,25 @@ body.no-scroll {
 }
 
 img {
-    width: 100%;
+    height: 70vh;
     padding: 20px 0px;
+}
+
+#popupImages{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+
+#popupTitle {
+    padding: 10px 20px;
+    font-size: 2rem;
+}
+
+#details {
+    padding: 0px 20px;
 }
 
 #close-btn {
