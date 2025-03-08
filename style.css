@@ -27,6 +27,7 @@ body {
 #footer-title {
 	float: left;
 	margin-left: 20px;
+	color: black;
 }
 
 #donate {
@@ -147,6 +148,42 @@ td {
 
 #logo img{
 	width: 100%;
+	height: auto;
+    padding: 0;
+}
+
+.testimonials-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+.testimonial-tile {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.testimonial-name {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.testimonial-review {
+    margin-bottom: 10px;
+}
+
+.testimonial-rating {
+    display: flex;
+    gap: 2px;
+}
+
+.star {
+    color: gold;
 }
 
 @media (max-width: 700px) {
@@ -187,38 +224,10 @@ td {
 	.class-pictures {
 		height: 30vw;
 	}
+
+	.testimonials-container {
+		grid-template-columns: repeat(2, 1fr);
+	}
 }
 
-.testimonials-container {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 20px;
-    padding: 20px;
-    margin: 0 auto;
-    max-width: 1200px;
-}
 
-.testimonial-tile {
-    background-color: #f9f9f9;
-    padding: 15px;
-    border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
-.testimonial-name {
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-.testimonial-review {
-    margin-bottom: 10px;
-}
-
-.testimonial-rating {
-    display: flex;
-    gap: 2px;
-}
-
-.star {
-    color: gold;
-}
