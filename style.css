@@ -7,6 +7,7 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
+	font-family: "DM Serif Text", serif;
 }
 
 #footer-list  {
@@ -123,6 +124,10 @@ body {
 
 .hidden {
     display: none;
+}
+
+.class-name {
+	font-size: larger;
 }
 
 .class-pictures {
