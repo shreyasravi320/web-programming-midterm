@@ -57,6 +57,10 @@
       .staff-member a:hover {
           background: #6c5ecf;
       }
+      @media (max-width: 600px) {
+        .staff-grid {
+            grid-template-columns: repeat(2, 1fr);  /* Forces two columns on small screens */
+      }
   </style>
 </head>
 <body>
