@@ -20,29 +20,27 @@
           max-width: 350px;
           height: auto;
           border-radius: 8px;
+          display: block;
+          margin: 20px auto;
       }
-      .about-img.left {
-          float: left;
-          margin-right: 30px;
-          margin-bottom: 20px;
-      }
-      .about-img.right {
-          float: right;
-          margin-left: 30px;
-          margin-bottom: 20px;
-      }
-      .about-img.small {
-          max-width: 250px;
-      }
+
       .about-section {
           overflow: hidden;
           display: flex;
+          flex-direction: column;
           align-items: center;
+          text-align: center;
           gap: 20px;
       }
+        
       .about-section p strong {
         font-size: 24px;
       }
+        
+      .about-section ul {
+          text-align: left;
+      }
+        
       @media (min-width: 700px) {
           .about-section {
               flex-direction: row;
