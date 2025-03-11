@@ -48,6 +48,21 @@
             margin-bottom: 5px;
             font-size: large;
         }
+
+        .submit-button {
+          font-size: large;
+          text-decoration: none;
+          align-self: center;
+          display:inline;
+          background-color: cornflowerblue;
+          border-radius: 15px;
+          padding: 10px;
+          margin-top: 10px;
+        }
+
+        .submit-button:hover {
+          background-color: rgb(100, 100, 233);
+        }
     </style>
 </head>
 <body>
@@ -93,12 +108,12 @@
                         <option value="Art History">Art History</option>
                     </select><br><br>
 
-                    <button type="submit">Submit</button>
+                    <button type="submit" class="submit-button">Submit</button>
                 </form>
 
                 <div id="success-container" class="hidden">
                     <p id="success-message">Successfully submitted your application!</p>
-                    <button id="back-button">Back to Admissions Page</button>
+                    <button id="back-button" class="submit-button">Back to Admissions Page</button>
                 </div>
             </div>
 

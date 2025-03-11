@@ -50,6 +50,23 @@
             text-decoration: none;
             cursor: pointer;
         }
+        .header {
+          text-align: center;
+        }
+        .donate-button {
+          font-size: large;
+          text-decoration: none;
+          align-self: center;
+          display:inline;
+          background-color: darkkhaki;
+          border-radius: 15px;
+          padding: 10px;
+          margin-top: 10px;
+        }
+
+        .donate-button:hover {
+          background-color: rgb(100, 100, 233);
+        }
     </style>
 </head>
 <body>
@@ -84,7 +101,7 @@
             <label for="amount">Donation Amount (USD):</label><br>
             <input type="number" id="amount" name="amount" required><br><br>
 
-            <input type="submit" value="Donate">
+            <input type="submit" value="Donate!" class="donate-button"> 
         </form>
     </div>
 
