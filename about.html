@@ -3,7 +3,6 @@
 <head>
     <title>About</title>
     <link rel="stylesheet" href="style.css">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Text&display=swap" rel="stylesheet">
     <style>
       body {
@@ -44,10 +43,17 @@
       .about-section p strong {
         font-size: 24px;
       }
-      @media (max-width: 700px) {
-        .about-img {
-            display:none;
-        }
+      @media (min-width: 700px) {
+          .about-section {
+              flex-direction: row;
+              text-align: left;
+          }
+          .about-img {
+              margin: 0;
+          }
+          .about-img.left {
+              order: -1;
+          }
       }
   </style>
 </head>
@@ -82,11 +88,11 @@
 
       <div class="about-section">
           <p><strong>Our Story</strong><br>Founded with a vision to create a space where art thrives, Newman’s Studio started as a small workshop and grew into a full-fledged creative community. Our journey has been shaped by passionate artists, educators, and students who believe in the transformative power of art.</p>
-          <img src="images/Zoe1/2.jpg" alt="Art exhibition in studio" class="about-img right">
+          <img src="images/Zoe1/2.jpg" class="about-img right">
       </div>
 
       <div class="about-section">
-          <img src="images/Zoe1/3.jpg" alt="Students working on art projects" class="about-img left small">
+          <img src="images/Zoe1/3.jpg" class="about-img left small">
           <div>
               <p><strong>What We Offer</strong></p>
               <ul>
