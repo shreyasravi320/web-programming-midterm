@@ -106,11 +106,9 @@
                   details.textContent = content.body;
                   popupImages.innerHTML = content.images.map(img => `<img src="${img}" alt="image">`).join("");
   
-                  // popup.style.display = "block";
-                  // overlay.style.display = "block";
                   $("#popup, #overlay").fadeIn(400);
                   document.body.classList.add("no-scroll");
-                  // document.body.classList.add("no-scroll");
+
               });
           });
       }
